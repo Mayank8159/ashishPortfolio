@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 export default function Page() {
   // ---- Project Data ----
   const projects = [
@@ -15,14 +16,15 @@ export default function Page() {
     },
     // Add more projects here ↓
     // {
-    //   title: "AI Yoga Assistant",
-    //   image: "/project3.png",
-    //   alt: "AI Yoga Assistant",
+    //   title: "AI Yoga Assistant",
+    //   image: "/project3.png",
+    //   alt: "AI Yoga Assistant",
     // },
   ];
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-12 space-y-16">
+    // Added 'font-sans' class. You should configure Archivo as your default 'sans' font in tailwind.config.js.
+    <main className="max-w-6xl mx-auto px-4 py-12 space-y-16 font-sans">
       {/* --- Hero Section --- */}
       <section className="flex flex-col sm:flex-row items-start gap-6">
         {/* Profile Image */}
@@ -38,8 +40,8 @@ export default function Page() {
 
         {/* Intro Text */}
         <div className="max-w-3xl">
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold leading-snug text-gray-900">
-            Hi, I’m <span className="font-bold">Ashish Sharma</span> — a
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-archivo leading-snug text-gray-900">
+            Hi, I’m <span>Ashish Sharma</span> — a
             software designer with 2+ years of experience building MVPs,
             websites, and apps for entrepreneurs and startup founders.
           </h1>
@@ -81,11 +83,11 @@ export default function Page() {
             world's first IIT campus & largest railway station were
             established). Started my design journey in 2020 as a graphic
             designer.
-            </p>
-            <p className="text-gray-700 leading-relaxed text-sm sm:text-base mt-4">
-            Today, I am grown into a mid-level product and web
-            designer shipping 40+ projects. Apart from design, I also build
-            end-to-end websites and landers on Framer, Webflow, and Figma Site.
+          </p>
+          <p className="text-gray-700 leading-relaxed text-sm sm:text-base mt-4">
+            Today, I am grown into a mid-level product and web designer shipping
+            40+ projects. Apart from design, I also build end-to-end websites
+            and landers on Framer, Webflow, and Figma Site.
           </p>
         </div>
       </section>
