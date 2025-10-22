@@ -87,8 +87,11 @@ export default function Navbar() {
       <div className="hidden md:flex items-center gap-6 relative">
         {/* Marquee */}
         <div className="relative overflow-hidden w-48 h-6 text-neutral-500">
-          <div className="absolute top-0 left-0 w-8 h-full bg-white pointer-events-none z-10" />
-          <div className="absolute top-0 right-0 w-8 h-full bg-white pointer-events-none z-10" />
+          {/* Fade Effects (Left & Right Gradients) */}
+          <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-white to-transparent pointer-events-none z-10" />
+          <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-white to-transparent pointer-events-none z-10" />
+
+          {/* Scrolling Text */}
           <div className="absolute whitespace-nowrap flex animate-marquee gap-6 text-sm sm:text-base font-semibold">
             {[...marqueeItems, ...marqueeItems].map((item, i) => (
               <span key={i}>{item} •</span>
