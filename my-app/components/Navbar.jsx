@@ -64,7 +64,7 @@ export default function Navbar() {
         </div>
 
         {/* Time */}
-        <span className="text-gray-500">· Kolkata — {time}</span>
+        <span className="text-gray-500">Kolkata — {time}</span>
 
         {/* Email Copy */}
         <div className="relative group">
@@ -103,7 +103,7 @@ export default function Navbar() {
         <div className="flex gap-3 text-lg text-black">
           <div className="relative group">
             <a
-              href="https://www.linkedin.com/in/your-profile"
+              href="https://www.linkedin.com/in/ashishkgp/"
               target="_blank"
               rel="noopener noreferrer"
             >
