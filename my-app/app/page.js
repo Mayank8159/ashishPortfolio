@@ -48,7 +48,6 @@ export default function Page() {
 
       {/* --- Work Section --- */}
       <section id="work" className="space-y-8">
-        <h2 className="text-lg font-semibold text-gray-800">Work</h2>
         <div className="grid sm:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="space-y-2">
