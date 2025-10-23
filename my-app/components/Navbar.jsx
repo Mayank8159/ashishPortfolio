@@ -41,9 +41,9 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 w-full px-4 py-3 bg-white border-b border-gray-200 shadow-lg flex justify-between items-center text-black font-medium">
-      {/* Left Section (Mobile: Only Resume + Time + Email) */}
+      {/* Left Section */}
       <div className="flex items-center gap-4 text-sm">
-        {/* Work Link (Hidden on Mobile) */}
+        {/* Work Link */}
         <div className="relative group hidden md:block">
           <a href="#work" className="hover:underline text-gray-500 cursor-pointer">
             Work
@@ -83,16 +83,13 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Right Section (Desktop only) */}
+      {/* Right Section */}
       <div className="hidden md:flex items-center gap-6 relative">
         {/* Marquee */}
         <div className="relative overflow-hidden w-48 h-6 text-neutral-500">
-          {/* Fade Effects (Left & Right Gradients) */}
           <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-white to-transparent pointer-events-none z-10" />
           <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-white to-transparent pointer-events-none z-10" />
-
-          {/* Scrolling Text */}
-          <div className="absolute whitespace-nowrap flex animate-marquee gap-6 text-sm sm:text-base font-semibold">
+          <div className="absolute whitespace-nowrap flex animate-marquee gap-6 text-sm sm:text-base">
             {[...marqueeItems, ...marqueeItems].map((item, i) => (
               <span key={i}>{item} •</span>
             ))}
@@ -106,6 +103,7 @@ export default function Navbar() {
               href="https://www.linkedin.com/in/ashishkgp/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
             >
               <FaLinkedin className="hover:text-neutral-700 transition cursor-pointer" />
             </a>
@@ -119,6 +117,7 @@ export default function Navbar() {
               href="https://contora.io/your-profile"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Contora Profile"
             >
               <FaLink className="hover:text-neutral-700 transition cursor-pointer" />
             </a>

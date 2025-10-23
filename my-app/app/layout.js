@@ -1,18 +1,20 @@
-// Your existing RootLayout.jsx is fine:
+// app/layout.js (or pages/_app.js if using Pages Router)
+import { Archivo } from 'next/font/google';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import './globals.css';
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import "./globals.css";
-
-// ...
+// Load Archivo font with CSS variable
+const archivo = Archivo({
+  subsets: ['latin'],
+  variable: '--font-archivo',
+  display: 'swap',
+});
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={archivo.variable}>
       <body className="bg-white text-black min-h-screen font-sans antialiased flex flex-col">
-        {/* The 'font-sans' class here is now redundant but harmless, 
-           as the 'font-family' property is explicitly set on the body in globals.css. */}
-        
         {/* Navbar */}
         <Navbar />
 
